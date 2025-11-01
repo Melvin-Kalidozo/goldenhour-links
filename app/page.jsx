@@ -20,9 +20,9 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen  flex items-center justify-center p-6">
+    <div className="min-h-screen  flex items-center justify-center ">
       {" "}
-      <div className=" text-white rounded-xl shadow-xl w-full max-w-md p-8 flex flex-col items-center gap-6 ">
+      <div className=" text-white rounded-xl shadow-xl w-full max-w-md p-2 flex flex-col items-center gap-6 ">
         {/* Logo */}{" "}
         <Image
           src="/Logo2.png"
@@ -32,7 +32,7 @@ export default function Home() {
           className=""
         />
         {/* Brand Name */}
-        <h1 className="text-3xl font-bold text-yellow-400">
+        <h1 className="text-3xl text-center font-bold text-yellow-400">
           GoldenHour Production
         </h1>
         {/* Tagline */}
