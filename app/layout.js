@@ -21,6 +21,8 @@ export const metadata = {
     "Content Creation",
   ],
   authors: [{ name: "GoldenHour Production" }],
+
+  // ✅ Open Graph metadata (for Facebook, WhatsApp, LinkedIn)
   openGraph: {
     title: "GoldenHour Production",
     description:
@@ -29,7 +31,7 @@ export const metadata = {
     siteName: "GoldenHour Production",
     images: [
       {
-        url: "/Logo2.png",
+        url: "https://goldenhour-links.vercel.app/Logo2.png", // ✅ Use absolute URL
         width: 800,
         height: 600,
         alt: "GoldenHour Production Logo",
@@ -38,13 +40,17 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
+
+  // ✅ Twitter metadata (for X/Twitter cards)
   twitter: {
     card: "summary_large_image",
     title: "GoldenHour Production",
     description:
       "Photography, Videography, Design, Software & Content Creation.",
-    images: ["/Logo2.png"],
+    images: ["https://goldenhour-links.vercel.app/Logo2.png"], // ✅ Absolute URL
   },
+
+  // ✅ Browser icon
   icons: {
     icon: "/Logo2.png",
   },
