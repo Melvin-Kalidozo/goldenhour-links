@@ -25,11 +25,11 @@ export const metadata = {
     title: "GoldenHour Production",
     description:
       "Creative studio specializing in photography, videography, design, and digital solutions.",
-    url: "https://yourdomain.com",
+    url: "https://goldenhour-links.vercel.app/",
     siteName: "GoldenHour Production",
     images: [
       {
-        url: "/Logo.png",
+        url: "/Logo2.png",
         width: 800,
         height: 600,
         alt: "GoldenHour Production Logo",
@@ -43,10 +43,10 @@ export const metadata = {
     title: "GoldenHour Production",
     description:
       "Photography, Videography, Design, Software & Content Creation.",
-    images: ["/Logo.png"],
+    images: ["/Logo2.png"],
   },
   icons: {
-    icon: "/Logo.png",
+    icon: "/Logo2.png",
   },
 };
 
