@@ -7,6 +7,7 @@ import {
   FaFacebook,
   FaWhatsapp,
   FaEnvelope,
+  FaLinkedin,
   FaInternetExplorer,
 } from "react-icons/fa";
 
@@ -14,18 +15,25 @@ export default function Home() {
   const contact = {
     whatsapp: "+265880593391",
     email: "goldenhourproduction265@gmail.com",
-    instagram: "https://www.instagram.com/goldenhour_production_265/",
-    tiktok: "https://www.tiktok.com/@goldenhour_mw",
-    facebook:
-      "https://web.facebook.com/people/Golden-Hour-Production/61571490627186/",
     website: "https://goldenhour265.com",
+    production: {
+      instagram: "https://www.instagram.com/goldenhour_production_265/",
+      tiktok: "https://www.tiktok.com/@goldenhour_mw",
+      facebook:
+        "https://web.facebook.com/people/Golden-Hour-Production/61571490627186/",
+    },
+    tech: {
+      instagram:
+        "https://www.instagram.com/goldenhour_tech?igsh=bXN0b2g5bHRweTBj",
+      facebook: "https://www.facebook.com/profile.php?id=61587549592603",
+      linkedin: "https://www.linkedin.com/company/goldenhour-tech",
+    },
   };
 
   return (
     <div className="min-h-screen bg-black text-white">
       {/* HERO SECTION */}
       <div className="relative h-[50vh] w-full flex items-center justify-center text-center px-6">
-        {/* Background Image */}
         <Image
           src="/hero.jpeg"
           alt="GoldenHour Hero"
@@ -33,19 +41,13 @@ export default function Home() {
           priority
           className="object-cover"
         />
-
-        {/* Black Overlay */}
         <div className="absolute inset-0 bg-black/70"></div>
-
-        {/* Content On Top */}
         <div className="relative z-10 flex flex-col items-center gap-4">
           <Image src="/Logo2.png" alt="Brand Logo" width={100} height={100} />
-
           <h1 className="text-4xl font-bold text-yellow-400">
             GoldenHour Production
           </h1>
-
-          <p className="text-gray-300 max-w-xl">
+          <p className="text-gray-300 max-w-xl text-center">
             Photography | Videography | Graphic Design | Software Solutions |
             Content Creation
           </p>
@@ -59,11 +61,7 @@ export default function Home() {
           <a
             href={contact.website}
             target="_blank"
-            className="flex items-center justify-center gap-3 
-               border border-yellow-500 text-yellow-400
-               hover:bg-yellow-500 hover:text-black
-               transition-all duration-300
-               py-3 rounded-lg font-medium"
+            className="flex items-center justify-center gap-3 border border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black transition-all duration-300 py-3 rounded-lg font-medium"
           >
             <FaInternetExplorer className="text-lg" />
             Our Website
@@ -72,12 +70,7 @@ export default function Home() {
           <a
             href={`https://wa.me/${contact.whatsapp}`}
             target="_blank"
-            className="flex items-center justify-center gap-3 
-               bg-white/5 backdrop-blur-sm
-               border border-white/10
-               hover:bg-white/10
-               transition-all duration-300
-               py-3 rounded-lg font-medium"
+            className="flex items-center justify-center gap-3 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 py-3 rounded-lg font-medium"
           >
             <FaWhatsapp className="text-lg text-green-400" />
             Chat on WhatsApp
@@ -85,48 +78,77 @@ export default function Home() {
 
           <a
             href={`mailto:${contact.email}`}
-            className="flex items-center justify-center gap-3 
-               bg-white/5 backdrop-blur-sm
-               border border-white/10
-               hover:bg-white/10
-               transition-all duration-300
-               py-3 rounded-lg font-medium"
+            className="flex items-center justify-center gap-3 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 py-3 rounded-lg font-medium"
           >
             <FaEnvelope className="text-lg text-yellow-400" />
             Email Us
           </a>
         </div>
 
-        {/* Social Links */}
-        <div>
-          <p className="text-center font-black text-gray-400">Follow Us</p>
+        {/* SOCIAL LINKS SECTION */}
+        <div className="mt-12 grid gap-8 md:grid-cols-2 justify-items-center">
+          {/* GoldenHour Production Card */}
+          <div className="bg-gray-900/50 backdrop-blur-md border border-yellow-500 rounded-xl p-6 flex flex-col items-center shadow-lg ">
+            <h2 className="text-sm font-bold  mb-4 text-center">
+              Follow GoldenHour Production
+            </h2>
+            <div className="flex gap-6">
+              <a
+                href={contact.production.instagram}
+                target="_blank"
+                className="text-yellow-400 hover:text-yellow-500 text-4xl transition-colors duration-300"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href={contact.production.tiktok}
+                target="_blank"
+                className="text-yellow-400 hover:text-yellow-500 text-4xl transition-colors duration-300"
+              >
+                <FaTiktok />
+              </a>
+              <a
+                href={contact.production.facebook}
+                target="_blank"
+                className="text-yellow-400 hover:text-yellow-500 text-4xl transition-colors duration-300"
+              >
+                <FaFacebook />
+              </a>
+            </div>
+          </div>
 
-          <div className="flex gap-6 mt-6 justify-center">
-            <a
-              href={contact.instagram}
-              target="_blank"
-              className="text-yellow-400 hover:text-yellow-500 text-3xl"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href={contact.tiktok}
-              target="_blank"
-              className="text-yellow-400 hover:text-yellow-500 text-3xl"
-            >
-              <FaTiktok />
-            </a>
-            <a
-              href={contact.facebook}
-              target="_blank"
-              className="text-yellow-400 hover:text-yellow-500 text-3xl"
-            >
-              <FaFacebook />
-            </a>
+          {/* GoldenHour Tech Card */}
+          <div className="bg-gray-900/50 backdrop-blur-md border border-yellow-500 rounded-xl p-6 flex flex-col items-center shadow-lg ">
+            <h2 className="text-sm font-bold mb-4 text-center">
+              Follow GoldenHour Tech
+            </h2>
+            <div className="flex gap-6">
+              <a
+                href={contact.tech.instagram}
+                target="_blank"
+                className="text-yellow-400 hover:text-yellow-500 text-4xl transition-colors duration-300"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href={contact.tech.facebook}
+                target="_blank"
+                className="text-yellow-400 hover:text-yellow-500 text-4xl transition-colors duration-300"
+              >
+                <FaFacebook />
+              </a>
+              <a
+                href={contact.tech.linkedin}
+                target="_blank"
+                className="text-yellow-400 hover:text-yellow-500 text-4xl transition-colors duration-300"
+              >
+                <FaLinkedin />
+              </a>
+            </div>
           </div>
         </div>
 
-        <p className="text-gray-500 text-sm text-center">
+        <p className="text-gray-500 text-sm text-center mt-8">
           © 2025 GoldenHour Production. All rights reserved.
         </p>
       </div>
