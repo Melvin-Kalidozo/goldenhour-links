@@ -88,7 +88,7 @@ export default function Home() {
         {/* SOCIAL LINKS SECTION */}
         <div className="mt-12 grid gap-8 md:grid-cols-2 w-full justify-items-center">
           {/* GoldenHour Production Card */}
-          <div className="bg-gray-900/50 w-full backdrop-blur-md border border-yellow-500 rounded-xl p-8 flex flex-col items-center shadow-lg ">
+          <div className="bg-gray-900/50 w-full backdrop-blur-md border rounded-xl p-8 flex flex-col items-center shadow-lg ">
             <h2 className="text-sm font-bold  mb-4 text-center">
               Follow GoldenHour Production
             </h2>
@@ -118,7 +118,7 @@ export default function Home() {
           </div>
 
           {/* GoldenHour Tech Card */}
-          <div className="bg-gray-900/50 backdrop-blur-md w-full border border-yellow-500 rounded-xl p-8 flex flex-col items-center shadow-lg ">
+          <div className="bg-gray-900/50 backdrop-blur-md w-full border rounded-xl p-8 flex flex-col items-center shadow-lg ">
             <h2 className="text-sm font-bold mb-4 text-center">
               Follow GoldenHour Tech
             </h2>
